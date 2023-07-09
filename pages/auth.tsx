@@ -25,9 +25,9 @@ const Auth = () => {
         email,
         password,
         redirect: false,
-        callbackUrl: "/",
+        callbackUrl: "/profiles",
       });
-      router.push("/");
+      router.push("/profiles");
     } catch (error) {
       // console.log(error);
     }
@@ -96,14 +96,14 @@ const Auth = () => {
               >
                 <FcGoogle
                   size={30}
-                  onClick={() => signIn("google", { callbackUrl: "/" })}
+                  onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                 />
               </div>
               <div
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center
               cursor-pointer hover:opacity-80 transition
               "
-                onClick={() => signIn("github", { callbackUrl: "/" })}
+                onClick={() => signIn("github", { callbackUrl: "/profiles" })}
               >
                 <FaGithub size={30} />
               </div>
